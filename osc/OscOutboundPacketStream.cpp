@@ -552,6 +552,16 @@ OutboundPacketStream& OutboundPacketStream::operator<<( int64 rhs )
     return *this;
 }
 
+OutboundPacketStream& OutboundPacketStream::operator<<( int64_t rhs )
+{
+    CheckForAvailableArgumentSpace(8);
+
+    *(--typeTagsCurrent_) = INT64_TYPE_TAG;
+    FromInt64( argumentCurrent_, rhs );
+    argumentCurrent_ += 8;
+
+    return *this;
+}
 
 OutboundPacketStream& OutboundPacketStream::operator<<( const TimeTag& rhs )
 {
