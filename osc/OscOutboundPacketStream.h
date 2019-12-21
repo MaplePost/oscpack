@@ -38,7 +38,7 @@
 #define INCLUDED_OSCPACK_OSCOUTBOUNDPACKETSTREAM_H
 
 #include <cstring> // size_t
-
+#include <cstdint>
 #include "OscTypes.h"
 #include "OscException.h"
 
