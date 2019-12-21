@@ -356,7 +356,7 @@ void test3()
 
     TEST_PACK_UNPACK( "/a_midi_message", MidiMessage(0x7F), uint32, AsMidiMessage );
 
-    TEST_PACK_UNPACK( "/an_int64", (int64)(0xFFFFFFFF), int64, AsInt64 );
+    TEST_PACK_UNPACK( "/an_int64", (int64_t)(0xFFFFFFFF), int64, AsInt64 );
 
     TEST_PACK_UNPACK( "/a_time_tag", TimeTag(0xFFFFFFFF), uint64, AsTimeTag );
 

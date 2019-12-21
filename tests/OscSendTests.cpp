@@ -151,7 +151,7 @@ void RunSendTests( const IpEndpointName& host )
             << MidiMessage(0x7F) << osc::EndMessage;
 
         p << osc::BeginMessage( "/an_int64" )
-            << (int64)(0xFFFFFFF) << osc::EndMessage;
+            << (int64_t)(0xFFFFFFF) << osc::EndMessage;
 
         p << osc::BeginMessage( "/a_time_tag" )
             << osc::TimeTag(0xFFFFFFFUL) << osc::EndMessage;

@@ -114,7 +114,7 @@ public:
     OutboundPacketStream& operator<<( char rhs );
     OutboundPacketStream& operator<<( const RgbaColor& rhs );
     OutboundPacketStream& operator<<( const MidiMessage& rhs );
-    OutboundPacketStream& operator<<( int64 rhs );
+    //OutboundPacketStream& operator<<( int64 rhs );
     OutboundPacketStream& operator<<( int64_t rhs );
     OutboundPacketStream& operator<<( const TimeTag& rhs );
     OutboundPacketStream& operator<<( double rhs );

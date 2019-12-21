@@ -541,16 +541,16 @@ OutboundPacketStream& OutboundPacketStream::operator<<( const MidiMessage& rhs )
 }
 
 
-OutboundPacketStream& OutboundPacketStream::operator<<( int64 rhs )
-{
-    CheckForAvailableArgumentSpace(8);
-
-    *(--typeTagsCurrent_) = INT64_TYPE_TAG;
-    FromInt64( argumentCurrent_, rhs );
-    argumentCurrent_ += 8;
-
-    return *this;
-}
+//OutboundPacketStream& OutboundPacketStream::operator<<( int64 rhs )
+//{
+//    CheckForAvailableArgumentSpace(8);
+//
+//    *(--typeTagsCurrent_) = INT64_TYPE_TAG;
+//    FromInt64( argumentCurrent_, rhs );
+//    argumentCurrent_ += 8;
+//
+//    return *this;
+//}
 
 OutboundPacketStream& OutboundPacketStream::operator<<( int64_t rhs )
 {
